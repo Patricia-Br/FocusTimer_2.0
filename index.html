@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FocusTimer - Versão 2.0</title>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon">
+  <script type="module" src="./src/main.js" defer></script>
+</head>
+
+<body>
+  <div id="app">
+    <section class="menu-pomodoro" class="flex">
+      <div id="timer" class="flex">
+        <span id="minutes">00</span>
+        <span>:</span>
+        <span id="seconds">00</span>
+      </div>
+
+      <div id="controls-timer" class="flex">
+        <button 
+          data-action="playPause"
+          class="ph ph-play-circle">
+          <span class="sr-only">Iniciar o contador</span>
+        </button>
+
+        <button
+          data-action="playPause"
+          class="ph ph-pause-circle">
+          <span class="sr-only">Pausar o contador</span>
+        </button>
+
+        <button 
+          data-action="reset"
+          class="ph ph-stop-circle">
+          <span class="sr-only">Resetar/definir o contador</span>
+        </button>
+
+        <button 
+          data-action="moreTime"
+          class="ph-bold ph-plus-circle">
+          <span class="sr-only">Aumenta o contador em mais 5 minutos</span>
+        </button>
+
+        <button 
+          data-action="lessTime"
+          class="ph-bold ph-minus-circle">
+          <span class="sr-only">Diminue o contador em menos 5 minutos</span>
+        </button>
+      </div>
+    </section>
+
+    <section id="menu-sounds">
+      <button 
+        data-action="soundTree"
+        class="ph ph-tree ">
+        <span class="sr-only">Som de Floresta</span>
+      </button>
+
+      <button 
+        data-action="soundRain"
+        class="ph ph-cloud-snow">
+        <span class="sr-only">Som de chuva</span>
+      </button>
+
+      <button 
+        data-action="soundCoffeeShop"
+        class="ph ph-storefront">
+        <span class="sr-only">Som ambiente de cafeteria</span>
+      </button>
+
+      <button 
+        data-action="soundFireplace"
+        class="ph ph-campfire">
+        <span class="sr-only">Som de lareira</span>
+      </button>
+    </section>
+  </div>
+</body>
+</html>

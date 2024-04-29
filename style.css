@@ -1,0 +1,116 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --timer-color: hsl(240, 6%, 21%);
+
+  --selected-bg-card: hsl(194, 97%, 31%, 1);
+
+  --normal-bg-card: hsl(240, 9%, 89%, 1);
+
+  --bg-color: hsl(0, 0%, 100%, 1);
+  font-size: 62.5%;
+  
+}
+
+body{
+  background-color: var(--bg-color);
+  color: var(--timer-color);
+  font-size: 1.6rem;
+  
+  display: grid;
+  height: 100vh;
+  place-content: center;
+}
+
+#app{
+  display: flex;
+  align-items: center;
+  gap: 19rem;
+}
+
+.flex{
+  display: flex;
+}
+
+.sr-only{
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
+  
+  margin: -1px;
+  padding: 0px;
+  border: 0;
+  appearance: none;  
+}
+
+/* menus */
+.menu-pomodoro #timer{
+  font-size: 13.0rem;
+  font-weight: 500;
+  color: var(--timer-color);
+  font-family: "Roboto", sans-serif;
+}
+
+.menu-pomodoro #controls-timer{
+  justify-content: center;
+  gap: 4rem;
+  margin-top: 1.7rem;
+  border-radius: 999rem;
+}
+
+.menu-pomodoro #controls-timer button{
+  background: transparent;
+  color: var(--timer-color);
+  
+  border: 0;
+  
+  cursor: pointer;
+  font-size: 4.8rem;
+}
+
+#controls-timer .ph-minus-circle:hover{
+  background-color: var(--timer-color);
+  color: var(--bg-color);
+  border-radius: 100%;
+}
+
+#controls-timer .ph-plus-circle:hover{
+  background-color: var(--timer-color);
+  color: var(--bg-color);
+  border-radius: 100%;
+}
+
+#menu-sounds{
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  gap: 3.2rem;
+}
+
+#menu-sounds button{
+  cursor: pointer;
+  border-radius: 2.4rem;
+  border: 0;
+  width: 138px;
+  height: 152px;
+  font-size: 5rem;
+}
+
+
+.running .ph-play-circle,
+html:not(.running) .ph-pause-circle{
+  display: none;
+}
+
+.selected{
+  color: var(--bg-color);
+  background-color: var(--selected-bg-card);
+}
+
+
+
+
